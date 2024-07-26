@@ -16,7 +16,7 @@ io.on('connection',(socket) => {
         console.log(message);
         // get from server
         // io.sockets.emit('sendChatToClient',message);
-        socket.broadcast.emit('sendChatToClient','message')
+        socket.broadcast.emit('sendChatToClient',message)
 
     });
 
