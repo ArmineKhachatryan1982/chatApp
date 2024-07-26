@@ -9,6 +9,17 @@ const io = require('socket.io')(server,{
    cors: {origin: "*"}
 });
 
+// const __dirname=resolve()
+
+// app.use('/', express.static(path.join(__dirname, 'public')));
+
+// const dotenv = configDotenv();
+// app.set("view engine", "ejs")
+
+// app.set("views", path.join(__dirname,"public"))
+
+// app.get("/",(req,res)=> res.render("index",{roomId: null, cookie: null}))
+
 io.on('connection',(socket) => {
     console.log('connection');
 
