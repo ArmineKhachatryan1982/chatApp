@@ -67,7 +67,7 @@
         <script>
 
             $(function(){
-                let ip_address = "178.160.195.69";
+                let ip_address = "https://socketiochat.webex.am";
                 let socket_port = '3000';
                 let socket = io(ip_address+ ':'+socket_port);
                 // it must be same word as in server.js io.on('connection',(socket) => {
