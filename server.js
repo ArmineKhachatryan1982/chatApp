@@ -1,12 +1,16 @@
-const express = require('express');
+// const express = require('express');
 
-const app = express();
-const server = require('http').createServer(app);
+// const app = express();
+// const server = require('http').createServer(app);
 
-const io = require('socket.io')(server,{
-   cors: {origin: "*"},
-   path: '/socket/io' // Set your custom path here
-});
+// const io = require('socket.io')(server,{
+//    cors: {origin: "*"},
+//    path: '/socket/io' // Set your custom path here
+// });
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
 
 http.listen(3000,function(){
     console.log(4444444444)
@@ -28,6 +32,6 @@ io.on('connection',(socket) => {
     });
 });
 
-server.listen(3000,() =>{
-    console.log('Server is runing');
-});
+// server.listen(3000,() =>{
+//     console.log('Server is runing');
+// });
