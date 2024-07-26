@@ -71,7 +71,7 @@
                 let socket_port = '3000';
                 let socket = io(ip_address+ ':'+socket_port);
                 // it must be same word as in server.js io.on('connection',(socket) => {
-                socket.on('connection');
+                // socket.on('connection');
                 let chatInput= $('#chatInput')
                 chatInput.keypress(function(e){
                     let message = $(this).html()
