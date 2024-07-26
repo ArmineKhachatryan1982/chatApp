@@ -5,10 +5,12 @@ const server = require('http').createServer(app);
 
 const io = require('socket.io')(server,{
    cors: {origin: "*"},
-   path: '/socket' // Set your custom path here
+   path: '/socket/io' // Set your custom path here
 });
 
-
+http.listen(3000,function(){
+    console.log(4444444444)
+})
 
 io.on('connection',(socket) => {
     console.log('connection1');
