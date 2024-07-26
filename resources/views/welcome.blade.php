@@ -67,7 +67,7 @@
         <script>
 
             $(function(){
-                let ip_address = "127.0.0.1";
+                let ip_address = "https://socketiochat.webex.am/";
                 let socket_port = '3000';
                 let socket = io(ip_address+ ':'+socket_port);
                 // it must be same word as in server.js io.on('connection',(socket) => {
@@ -77,7 +77,7 @@
                     let message = $(this).html()
                     console.log(message)
                     if(e.which ===13 && !e.shiftKey){
-                    
+
                         socket.emit('sendChatToServer',message);
                         chatInput.html('');
                         return false;
